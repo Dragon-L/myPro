@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "author": "Guolong",
   "scripts": {
-    "start": "node startServer.js",
-    "build": "webpack entry.js tes.js"
+    "start1": "node startServer.js",
+    "build": "webpack",
+    "start": "webpack-dev-server --content-base server"
   },
   "dependencies": {
   },
