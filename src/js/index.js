@@ -1,1 +1,1 @@
-document.write("This is index page!")
+document.write("This paragraph is injected by js!")
