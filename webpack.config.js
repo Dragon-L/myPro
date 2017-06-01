@@ -1,9 +1,14 @@
+const path = require('path');
 var webpack = require('webpack');
 
+var ROOT_PATH = path.resolve(__dirname);
+var BUILD_PATH = path.resolve(ROOT_PATH, 'server/dist');
+var SRC_PATH = path.resolve(ROOT_PATH, 'src/server.js');
+
 module.exports = {
-    entry: './server.js',
+    entry: SRC_PATH,
     output: {
-        path: './server',
+        path: BUILD_PATH,
         filename: 'bundle.js'
     },
     module: {
