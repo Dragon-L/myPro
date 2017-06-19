@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-
 var webpackServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 

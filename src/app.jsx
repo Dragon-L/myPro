@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import MyTag from './component/MyTag.jsx';
 import './css/index.css';
-import './js/index';
-
-class MyTag extends Component {
-    render() {
-        return (
-            <p>this is react code!</p>
-        );
-    }
-}
+import './js/index.js';
 
 ReactDOM.render(
-    <MyTag />,
+    <MyTag name='Guolong'/>,
     document.getElementById('container')
 );
