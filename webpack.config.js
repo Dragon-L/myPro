@@ -28,5 +28,8 @@ module.exports = {
     },
     plugins: [
         new webpack.BannerPlugin('This file is created by webpack')
-    ]
+    ],
+    resolve: {
+        extensions: ['', '.js', '.jsx', '.css'],
+    }
 };
