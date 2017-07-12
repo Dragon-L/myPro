@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {Router, Route, browserHistory} from 'react-router';
 
@@ -13,11 +13,11 @@ store.subscribe(() => {
     console.log('************state has changed*************')
 });
 
-ReactDOM.render(
+render(
     <Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={Container} >
-                <Route path="/index" component={MyTag} />
+            <Route path="/" component={Container}>
+                <Route path="/index" component={MyTag}/>
             </Route>
         </Router>
     </Provider>,
