@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Container = props => (
-    <div>
+    <div id="container">
         {props.children}
     </div>
 );
