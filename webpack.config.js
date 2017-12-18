@@ -14,13 +14,20 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.css$/, loader: 'style-loader!css-loader'
+                test: /\.less$/,
+                use: [{
+                        loader: "style-loader"
+                    }, {
+                        loader: "css-loader"
+                    }, {
+                        loader: "less-loader"
+                    }]
             }, {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,              //why?
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['env', 'react']
                 }
             }, {
                 test: /\.(png|jpg)$/,
@@ -32,6 +39,6 @@ module.exports = {
         new webpack.BannerPlugin('This file is created by webpack')
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx', '.css']
+        extensions: ['.js', '.jsx', '.less']
     }
 };

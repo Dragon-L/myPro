@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Tittle from '../Common/Tittle';
+import Title from '../Common/Title';
 import SaleInput from '../Common/SaleInput';
 
 const MyTag = props => (
     <div>
-        <Tittle text={props.tittle.sale} />
+        <Title text={props.tittle} />
         <SaleInput />
     </div>
 );
@@ -14,9 +14,7 @@ const MyTag = props => (
 
 function mapStateToProps(state) {
     return  {
-        tittle: {
-            sale: '销售录入'
-        }
+        tittle: state.tittle
     };
 }
 

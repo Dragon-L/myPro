@@ -4,6 +4,6 @@ var reducer = (state, action) => {
     return state;
 };
 
-var store = createStore(reducer, {name : 'Guolong'});
+var store = createStore(reducer, {tittle : '销售录入'});
 
 export default store;
